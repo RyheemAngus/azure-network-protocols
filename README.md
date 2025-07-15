@@ -1,25 +1,57 @@
-# 🧊 3D Product Showcase
+<p align="center">
+<img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
+</p>
 
-A 3D render of a product visualized in a browser using Three.js.
+<h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
+In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
 
-## 🎥 Preview
 
-> 💡 Upload your 3D file (GLB or GLTF) and use it in a viewer like `model-viewer` or Three.js.
+<h2>Video Demonstration</h2>
 
-![preview](preview.png)
+- ### [YouTube: Azure Virtual Machines, Wireshark, and Network Security Groups](https://www.youtube.com)
 
-## 📂 Files
+<h2>Environments and Technologies Used</h2>
 
-- `model.glb` — your 3D model
-- `index.html` — simple web viewer
-- `README.md` — you're reading this!
+- Microsoft Azure (Virtual Machines/Compute)
+- Remote Desktop
+- Various Command-Line Tools
+- Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
+- Wireshark (Protocol Analyzer)
 
-## 🌐 Live Demo
+<h2>Operating Systems Used </h2>
 
-You can host this using GitHub Pages.
+- Windows 10 (21H2)
+- Ubuntu Server 20.04
 
-1. Go to Settings → Pages
-2. Choose branch: `main`, folder: `/root`
-3. Save and visit your live site!
+<h2>High-Level Steps</h2>
 
----
+- Step 1
+- Step 2
+- Step 3
+- Step 4
+
+<h2>Actions and Observations</h2>
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</p>
+<br />
