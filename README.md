@@ -25,10 +25,18 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-- 
-- 
-- 
-- 
+- ICMP Traffic Control
+Configure NSG rules to block/allow ping requests
+Observe real-time traffic changes in Wireshark
+- SSH Session Inspection
+Capture encrypted SSH handshake and commands
+Analyze TCP port 22 traffic patterns
+- DHCP Lease Process
+Trigger IP renewal and capture 4-way handshake
+- DNS Query Analysis
+Monitor UDP port 53 during domain resolution
+- RDP Stream Observation
+Examine persistent TCP connection characteristics
 
 <p>
 <h2>ICMP Traffic with NSG Rules</h2>
@@ -54,7 +62,6 @@ Expected: Successful replies resume
 <p>
 <img width="2239" height="1124" alt="Image" src="https://github.com/user-attachments/assets/5a8f50a2-f5d6-48d4-b2f3-2ff267dcbf87" />
 </p>
-Screenshot: Wireshark with restored ICMP traffic
 </p>
 <br />
 
@@ -71,7 +78,7 @@ Run commands (ls, pwd)
 
 Key Observations: Encrypted packet exchanges during login/commands
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="2240" height="1260" alt="Image" src="https://github.com/user-attachments/assets/83d30599-7f05-486d-a041-1452ddf089ff" />
 </p>
 </p>
 <br />
@@ -90,8 +97,7 @@ ipconfig /renew
 
 Observe:
 DHCP Discover, Offer, Request, ACK packets
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p><img width="2240" height="1260" alt="Image" src="https://github.com/user-attachments/assets/031bbdf2-d145-4383-b48f-9d21dc5afeaa" />
 </p>
 </p>
 <br />
@@ -110,7 +116,7 @@ nslookup disney.com
 Expected:
 UDP port 53 queries/responses
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="585" height="724" alt="Image" src="https://github.com/user-attachments/assets/1d4a458c-c185-4892-8206-63c978f48f2f" />
 </p>
 </p>
 <br />
@@ -124,9 +130,16 @@ Wireshark Filter: tcp.port == 3389
 
 Observation:
 Continuous TCP packets (RDP maintains persistent connection)
+
+RDP maintains a persistent TCP connection (port 3389) for:
+
+- Screen refresh updates
+
+- Input synchronization
+
+- Keepalive packets
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1399" height="769" alt="Image" src="https://github.com/user-attachments/assets/b0dd88eb-8711-4939-bdf0-6713899d565e" />
 </p>
 </p>
 <br />
-
