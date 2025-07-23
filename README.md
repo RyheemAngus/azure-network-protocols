@@ -5,27 +5,28 @@
 <h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
 In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
 
-
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: Azure Virtual Machines, Wireshark, and Network Security Groups](https://www.youtube.com)
-
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure (Virtual Machines, Vnets, NSGs)
 - Remote Desktop
 - Various Command-Line Tools
 - Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
+- Powershell 7.x
 - Wireshark (Protocol Analyzer)
 
 <h2>Operating Systems Used </h2>
 
+- Windows Server 2022
 - Windows 10 (21H2)
 - Ubuntu Server 20.04
 
 <h2>High-Level Steps</h2>
 
-- ICMP Traffic Control
+- Create Azure Resource Group and Virtual Network
+- Deploy Windows Server 2022 VM
+- Deploy Windows 10 VM 
+- Configure Active Directory Domain Services
+-  ICMP Traffic Control
 Configure NSG rules to block/allow ping requests
 Observe real-time traffic changes in Wireshark
 - SSH Session Inspection
@@ -37,6 +38,71 @@ Trigger IP renewal and capture 4-way handshake
 Monitor UDP port 53 during domain resolution
 - RDP Stream Observation
 Examine persistent TCP connection characteristics
+
+Create Azure Resource Group and Virtual Network
+Deploy Windows Server 2022 VM 
+Deploy Windows 10 VM 
+Configure Active Directory Domain Services
+
+<h1>Deployment and Configuration Steps</h1>
+
+<p>
+<h2>Azure VM Deployment</h2>
+
+Create a Resource Group
+
+Navigate to Azure Portal.
+Resource Groups → Create → Name: Networking-Lab-RG → Region: (East US 2).
+
+Create Virtual Network (VNet)
+
+During Windows Server VM creation:
+Virtual Network: Create new (AD-VNet)
+Subnet: Default (10.0.0.0/24)
+<p>
+<img width="1370" height="495" alt="Image" src="https://github.com/user-attachments/assets/c1832eb6-22b4-4775-ae04-5eacc650db65" />
+</p>
+</p>
+<br />
+
+<p>
+<h2>Virtual Machine Deployment</h2>
+
+Windows 10 Client VM
+
+Setting	Value
+Name	win10-client
+Image	Windows 10 Pro, 21H2
+VNet	Lab2-Vnet
+NSG Rules	Auto-created RDP (3389)
+<p>
+<img width="1052" height="725" alt="Image" src="https://github.com/user-attachments/assets/819b044d-a9e4-492b-9fbc-738118378cfc" />
+</p>
+
+Ubuntu Linux VM
+
+Setting	Value
+Name	ubuntu-test
+Authentication	Username/Password
+IP Assignment	Dynamic (10.0.0.x)
+<p>
+<img width="1353" height="998" alt="Image" src="https://github.com/user-attachments/assets/0ad0c7f5-ea5c-4081-8d8e-de4bb8850e40" />
+</p>
+</p>
+<br />
+
+<p>
+<h2>Tool Installation & Network Validation</h2>
+
+PowerShell 7 Installation
+
+Wireshark Installation
+
+This will enable us to observe the traffic coming from and going to the virtual machines
+
+<p>
+<img width="1145" height="647" alt="Image" src="https://github.com/user-attachments/assets/3519e008-9c0c-4d63-a5ff-dd635a827d1f" />
+</p>
 
 <p>
 <h2>ICMP Traffic with NSG Rules</h2>
