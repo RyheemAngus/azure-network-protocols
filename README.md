@@ -39,11 +39,6 @@ Monitor UDP port 53 during domain resolution
 - RDP Stream Observation
 Examine persistent TCP connection characteristics
 
-Create Azure Resource Group and Virtual Network
-Deploy Windows Server 2022 VM 
-Deploy Windows 10 VM 
-Configure Active Directory Domain Services
-
 <h1>Deployment and Configuration Steps</h1>
 
 <p>
